@@ -28,7 +28,7 @@ export default function Projects() {
     {
       title: "Galeriloop",
       description: "Aplicação web para gerenciar fotos.",
-      cover: "/assets/Galeriloop/Cover_Galeriloop.png",
+      cover: "/Portfolio/assets/Galeriloop/Cover_Galeriloop.png",
       techs: [
         { name: "NodeJs", icon: <FaNodeJs className="text-green-500" /> },
         { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
@@ -42,7 +42,7 @@ export default function Projects() {
           icon: <SiJavascript className="text-yellow-400" />,
         },
       ],
-      gallery: ["/assets/Galeriloop/Cover_Galeriloop.png", "/assets/Galeriloop/Home_Galeriloop.png", "/assets/Galeriloop/Album_Vazio_Galeriloop.png", "/assets/Galeriloop/Album_Fotos_Galeriloop.png", "/assets/Galeriloop/Links_Galeriloop.png", "/assets/Galeriloop/Cart_Galeriloop.png"],
+      gallery: ["/Portfolio/assets/Galeriloop/Cover_Galeriloop.png", "/Portfolio/assets/Galeriloop/Home_Galeriloop.png", "/Portfolio/assets/Galeriloop/Album_Vazio_Galeriloop.png", "/Portfolio/assets/Galeriloop/Album_Fotos_Galeriloop.png", "/Portfolio/assets/Galeriloop/Links_Galeriloop.png", "/Portfolio/assets/Galeriloop/Cart_Galeriloop.png"],
       detalhes:
         "O sistema Galeriloop é uma plataforma de gerenciamento de fotos projetada para otimizar o fluxo de trabalho de instituições e empresas. Suas principais funcionalidades incluem um módulo de upload de fotos que aplica automaticamente marcas d'água e reduz a qualidade das imagens para pré-visualização. Além disso, possui um sistema de gerenciamento de grupos e links que permite a criação de links seguros para grupos de usuários e a organização em subgrupos. Por fim, o Galeriloop conta com um módulo de e-commerce com carrinho de compras, onde os usuários podem selecionar fotos, calcular o valor total do pedido e receber uma cotação por e-mail através do Nodemailer. Todo o projeto é executado em ambiente Docker, garantindo portabilidade e escalabilidade.",
       link: "#",
@@ -78,7 +78,7 @@ export default function Projects() {
     {
       title: "Chronnos",
       description: "Aplicação web da Carteira Acadêmica Digital.",
-      cover: "/assets/chronnos/cover-chronnos.png",
+      cover: "/Portfolio/assets/chronnos/cover-chronnos.png",
       techs: [
         { name: "NodeJs", icon: <FaNodeJs className="text-green-500" /> },
         { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
@@ -86,13 +86,13 @@ export default function Projects() {
         { name: "Vite", icon: <SiVite className="text-white" /> },
       ],
       gallery: [
-        "/assets/chronnos/cursos-chronnos.png",
-        "/assets/chronnos/anotacoes-chronnos.png",
-        "/assets/chronnos/timeline-chronnos.png",
-        "/assets/chronnos/mobile1_chronnos.png",
-        "/assets/chronnos/mobile2_chronnos.png",
-        "/assets/chronnos/mobile3_chronnos.png",
-        "/assets/chronnos/mobile4_chronnos.png",
+        "/Portfolio/assets/chronnos/cursos-chronnos.png",
+        "/Portfolio/assets/chronnos/anotacoes-chronnos.png",
+        "/Portfolio/assets/chronnos/timeline-chronnos.png",
+        "/Portfolio/assets/chronnos/mobile1_chronnos.png",
+        "/Portfolio/assets/chronnos/mobile2_chronnos.png",
+        "/Portfolio/assets/chronnos/mobile3_chronnos.png",
+        "/Portfolio/assets/chronnos/mobile4_chronnos.png",
       ],
       detalhes:
         "Um sistema completo para gerenciar certificados e cursos. O Chronnos é um software web, desenvolvido em um projeto acadêmico, que funciona como uma carteira de cursos digital completa, projetada para centralizar e organizar todo o histórico acadêmico de um usuário, permitindo o registro detalhado de cursos com certificados, custos, tempo de estudo, datas e notas, visando facilitar o acesso e compartilhamento seguro dessas informações. Seu principal recurso é uma TimeLine gráfica que exibe visualmente a trajetória de estudos, útil tanto para acompanhamento pessoal quanto para enriquecer perfis profissionais. Para sua construção, o Node.js foi empregado no backend, permitindo que a lógica do servidor fosse escrita em JavaScript para processar requisições e interagir com o banco de dados. Este, por sua vez, foi implementado com MySQL, responsável por armazenar de forma estruturada e persistente todos os dados da plataforma. A interface do usuário (frontend) foi desenvolvida com React e JavaScript, proporcionando uma experiência intuitiva e dinâmica, enquanto o Vite otimizou o processo de desenvolvimento do frontend, acelerando o build e as atualizações durante a codificação. Concebido para o usuário moderno, o Chronnos oferece uma solução prática para gerenciar e exibir conquistas acadêmicas de forma integrada e acessível.",
@@ -101,7 +101,7 @@ export default function Projects() {
     {
       title: "SCE - Sistema de Controle de Estoque",
       description: "Sistema Web para controle de estoque da Sementes Estrela.",
-      cover: "/assets/SCE/Cover_SCE.png",
+      cover: "/Portfolio/assets/SCE/Cover_SCE.png",
       techs: [
         { name: "Java", icon: <FaJava className="text-orange-600" />},
         { name: "Spring Boot", icon: <SiSpringboot className="text-green-400" />},
@@ -113,7 +113,7 @@ export default function Projects() {
         { name: "Bootstrap", icon: <FaBootstrap className="text-cyan-600" /> },
         
       ],
-      gallery: ["/assets/SCE/Cover_SCE.png", "/assets/SCE/Home_SCE.png"],
+      gallery: ["/Portfolio/assets/SCE/Cover_SCE.png", "/Portfolio/assets/SCE/Home_SCE.png"],
       detalhes:
         "O Sistema de Controle de Estoque (SCE) foi uma aplicação web desenvolvida para otimizar a gestão de estoque e compras da Sementes Estrela, visando reduzir custos operacionais e evitar aquisições desnecessárias ao integrar as filiais da empresa para um controle centralizado e compras mais inteligentes. Para sua construção, o frontend utilizou HTML, CSS e JavaScript, criando uma interface intuitiva e responsiva para a visualização de estoque e gestão de pedidos, enquanto o backend foi implementado com Java Spring Boot, garantindo segurança, escalabilidade e uma integração eficiente com o banco de dados PostgreSQL, que ficou responsável pelo armazenamento e gerenciamento dos dados de estoque, compras e filiais. Antes da implementação do SCE, a empresa enfrentava problemas como compras excessivas de itens já disponíveis em outras unidades; com o sistema, foi possível reduzir significativamente gastos com aquisições redundantes, centralizar o controle de estoque para decisões assertivas e aumentar a eficiência operacional ao automatizar a gestão de inventário. As funcionalidades principais do SCE incluem uma visão integrada de todos os itens nas filiais, alertas de reposição baseados em níveis mínimos, a integração entre filiais para permitir a transferência interna de itens antes de novas compras, e a geração de relatórios gerenciais para análise de custos e tomada de decisão estratégica, resultando em uma gestão de estoque mais eficiente e econômica para a Sementes Estrela.",
       link: "#",
@@ -121,7 +121,7 @@ export default function Projects() {
     {
       title: "GSE - Gestão Sementes Estrela",
       description: "Sistema Web ERP integrado com diversos setores da empresa.",
-      cover: "/assets/GSE/Login_GSE.png",
+      cover: "/Portfolio/assets/GSE/Login_GSE.png",
       techs: [
         { name: "Angular", icon: <FaAngular className="text-red-500" /> },
         { name: "Java", icon: <FaJava className="text-orange-600" />},
@@ -133,7 +133,7 @@ export default function Projects() {
         { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
         
       ],
-      gallery: ["/assets/GSE/Login_GSE.png", "/assets/GSE/Checklist_GSE.png"],
+      gallery: ["/Portfolio/assets/GSE/Login_GSE.png", "/Portfolio/assets/GSE/Checklist_GSE.png"],
       detalhes:
         "O Gestão Sementes Estrela (GSE) é um sistema web de planejamento de recursos empresariais (ERP) desenvolvido para a Sementes Estrela, projetado para centralizar e otimizar as operações de diversos setores da empresa, como Qualidade, Estoque, Recursos Humanos e TI. Este sistema encontra-se em desenvolvimento contínuo, com a integração progressiva de novas funcionalidades e setores para abranger de forma cada vez mais completa as necessidades da organização. Para sua construção, o frontend é desenvolvido com Angular, utilizando TypeScript para uma codificação mais robusta e organizada, HTML5 para a estruturação das páginas e SCSS para a estilização avançada, resultando em uma interface de usuário moderna e interativa. A lógica de negócios e o backend do sistema são implementados em Java com o auxílio do framework Spring Boot, que oferece uma plataforma eficiente para criar serviços seguros e escaláveis. O armazenamento e gerenciamento de todos os dados da aplicação são confiados ao banco de dados PostgreSQL, enquanto o controle de versão do código e a colaboração entre a equipe de desenvolvimento são gerenciados através do GitHub, assegurando um processo de desenvolvimento ágil e organizado para este ERP em constante evolução.",
       link: "#",

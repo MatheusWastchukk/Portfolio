@@ -22,7 +22,7 @@ export default function Experience() {
               </h2>
               <div className="flex flex-col gap-6">
                 <ExperienceCard
-                  logo={"/assets/logo_sementesEstrela.jpg"}
+                  logo="/Portfolio/assets/logo_sementesEstrela.jpg"
                   cargo="Auxiliar de TI"
                   empresa="Sementes Estrela"
                   periodo="dez de 2024 - Atualmente"
@@ -35,7 +35,7 @@ export default function Experience() {
                   ]}
                 />
                 <ExperienceCard
-                  logo={"/assets/logo_sementesEstrela.jpg"}
+                  logo="/Portfolio/assets/logo_sementesEstrela.jpg"
                   cargo="Jovem Aprendiz TI"
                   empresa="Sementes Estrela"
                   periodo="fev de 2024 - dez de 2024"
@@ -47,7 +47,7 @@ export default function Experience() {
                   ]}
                 />
                 <ExperienceCard
-                  logo={"/assets/logo_compassUol.png"}
+                  logo="/Portfolio/assets/logo_compassUol.png"
                   cargo="Estagiário Cloud & DevSecOps"
                   empresa="Compass Uol"
                   periodo="jun de 2024 - nov de 2024"
@@ -59,7 +59,7 @@ export default function Experience() {
                   ]}
                 />
                 <ExperienceCard
-                  logo={"/assets/logo_hospital.jpg"}
+                  logo="/Portfolio/assets/logo_hospital.jpg"
                   cargo="Jovem Aprendiz"
                   empresa="Hospital de Caridade de Erechim"
                   periodo="set de 2023 - fev de 2024"
@@ -71,7 +71,7 @@ export default function Experience() {
                   ]}
                 />
                 <ExperienceCard
-                  logo={"/assets/logo_tjrs.jpg"}
+                  logo="/Portfolio/assets/logo_tjrs.jpg"
                   cargo="Estagiário"
                   empresa="Foro da Comarca de Erechim"
                   periodo="jan de 2022 - jan de 2023"
@@ -90,7 +90,7 @@ export default function Experience() {
                 Formações
               </h2>
               <EducationCard 
-              logo={"/assets/logo_uri.png"}
+              logo="/Portfolio/assets/logo_uri.png"
               instituicao="Universidade Regional Integrada do Alto Uruguai e das Missões"
               curso="Bacharelado em Ciência da Computação"
               periodo="Março de 2023 - Janeiro de 2027 (previsto)"

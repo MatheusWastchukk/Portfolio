@@ -21,7 +21,7 @@ export default function About() {
             {/* Esquerda: SVGs */}
             <div className="flex-1 flex flex-col items-center md:items-center justify-center gap-6">
               <img
-                src="/assets/Perfil.jpg"
+                src="/Portfolio/assets/Perfil.jpg"
                 alt="Matheus Wastchuk"
                 className="w-48 h-56 sm:w-64 sm:h-80 md:w-80 md:h-104 object-cover rounded-xl shrink-0 border-2 border-green-400 shadow-[0_0_24px_2px_rgba(1,173,93,0.5)] bg-gradient-to-br from-[#000000] via-[#080c09] to-[#012d1a]"
               />
@@ -86,7 +86,7 @@ export default function About() {
             />
           </section>
           <a
-            href="/curriculo.pdf"
+            href="/Portfolio/curriculo.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-6 px-6 py-2 rounded-lg border-2 border-green-400 text-green-400 font-semibold hover:bg-green-400 hover:text-black shadow-[0_0_8px_#01AD5D] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_16px_#01AD5D]"

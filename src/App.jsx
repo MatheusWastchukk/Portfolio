@@ -11,7 +11,7 @@ import Contact from './pages/contact'
  */
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experience" element={<Experience />} />

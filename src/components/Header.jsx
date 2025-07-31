@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * Links de navegação do menu
@@ -27,9 +28,9 @@ export default function Header({ activePage }) {
         </span>
         <nav className="flex flex-wrap justify-center gap-4 sm:gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.href}
+              to={link.href}
               className={`
                 text-sm sm:text-base font-medium px-2 transition whitespace-nowrap
                 ${activePage === link.id ? "bg-[linear-gradient(90deg,#204232,#01AD5D)] bg-clip-text text-transparent font-bold" : "text-white"}
@@ -37,7 +38,7 @@ export default function Header({ activePage }) {
               `}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
