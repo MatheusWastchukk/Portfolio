@@ -11,12 +11,17 @@ import {
 import Header from "../components/Header";
 import AnimatedBackground from "../components/AnimatedBackground";
 import Typewriter from "../components/typewriter";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
 
 /**
  * Página inicial do portfólio
  * @returns {JSX.Element} Página inicial com apresentação pessoal e links
  */
 export default function Home() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="min-h-screen bg-black relative">
       <AnimatedBackground />
@@ -28,19 +33,19 @@ export default function Home() {
               <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold mb-2 w-full max-w-4xl mx-auto">
                 <Typewriter>
                   <span className="bg-[linear-gradient(90deg,#204232,#01AD5D)] bg-clip-text text-transparent">
-                    Olá, eu sou o Matheus!
+                    {t.home.greeting}
                   </span>
                   <span className="inline-block py-2">👋</span>
                 </Typewriter>
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 w-full max-w-3xl mx-auto">
-                <span className="text-gray-400 font-normal">Desenvolvedor</span>
-                <span className="bg-[linear-gradient(90deg,#204232,#01AD5D)] bg-clip-text text-transparent ml-2 font-bold">Front-End</span>
+                <span className="text-gray-400 font-normal">{t.home.developer}</span>
+                <span className="bg-[linear-gradient(90deg,#204232,#01AD5D)] bg-clip-text text-transparent ml-2 font-bold">{t.home.frontend}</span>
               </h2>
-              <h3 className="text-lg sm:text-xl md:text-2xl text-gray-400 font-normal mb-2 w-full max-w-2xl mx-auto">com foco em web frameworks</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl text-gray-400 font-normal mb-2 w-full max-w-2xl mx-auto">{t.home.focus}</h3>
               <h4 className="text-lg sm:text-2xl md:text-3xl font-bold text-white w-full max-w-2xl mx-auto">
                 <span className="bg-[linear-gradient(90deg,#204232,#01AD5D)] bg-clip-text text-transparent">Angular</span>
-                <span className="text-gray-400 font-normal"> e </span>
+                <span className="text-gray-400 font-normal">{t.home.and}</span>
                 <span className="bg-[linear-gradient(90deg,#204232,#01AD5D)] bg-clip-text text-transparent">React</span>
                 <span className="text-gray-400">.</span>
               </h4>
@@ -52,7 +57,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 xs:gap-2 px-4 xs:px-6 sm:px-8 py-2 xs:py-2.5 sm:py-3 rounded-lg border-2 border-green-400 text-green-400 font-bold text-base xs:text-lg sm:text-xl hover:bg-green-400 hover:text-black shadow-[0_0_8px_#01AD5D] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_16px_#01AD5D] min-w-[120px] justify-center"
                   >
-                    <FaGithub className="text-xl xs:text-2xl sm:text-3xl" /> GitHub
+                    <FaGithub className="text-xl xs:text-2xl sm:text-3xl" /> {t.home.github}
                   </a>
                   <a
                     href="https://www.linkedin.com/in/matheuswastchuk"
@@ -61,7 +66,7 @@ export default function Home() {
                     className="flex items-center gap-1 xs:gap-2 px-4 xs:px-6 sm:px-8 py-2 xs:py-2.5 sm:py-3 rounded-lg border-2 border-green-400 text-green-400 font-bold text-base xs:text-lg sm:text-xl hover:bg-green-400 hover:text-black shadow-[0_0_8px_#01AD5D] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_16px_#01AD5D] min-w-[120px] justify-center"
                   >
                     <FaLinkedin className="text-xl xs:text-2xl sm:text-3xl"/>
-                    LinkedIn
+                    {t.home.linkedin}
                   </a>
                 </div>
               </div>

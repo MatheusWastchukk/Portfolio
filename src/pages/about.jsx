@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../components/Header";
 import AnimatedBackground from "../components/AnimatedBackground";
 import SkillCard from "../components/SkillCard";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
 import { FaReact, FaAngular, FaGitAlt, FaFigma, FaAws, FaJava, FaNodeJs, FaGithub, FaRegLightbulb, FaPeopleCarry, FaUserCheck, FaUserFriends, FaRegSmile, FaRegListAlt, FaBookOpen, FaDocker} from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiHtml5, SiCss3, SiTailwindcss, SiSpringboot, SiPostgresql, SiMysql, SiKubernetes } from "react-icons/si";
 
@@ -10,6 +12,9 @@ import { SiJavascript, SiTypescript, SiHtml5, SiCss3, SiTailwindcss, SiSpringboo
  * @returns {JSX.Element} Página sobre com cards de habilidades e formação
  */
 export default function About() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="min-h-screen bg-black relative">
       <AnimatedBackground />
@@ -28,41 +33,33 @@ export default function About() {
             </div>
             {/* Direita: Texto sobre mim */}
             <div className="flex-1 flex flex-col justify-center">
-              <h1 className="text-3xl font-bold text-white mb-4">Sobre Mim</h1>
+              <h1 className="text-3xl font-bold text-white mb-4">{t.about.title}</h1>
               <p className="text-gray-200 text-lg leading-relaxed text-justify mb-2">
-                Sou um entusiasta da tecnologia, atualmente cursando Ciência da
-                Computação e atuando como Auxiliar de TI. Minha paixão é
-                transformar ideias em realidade digital, por isso me dedico a
-                criar sites e sistemas web dinâmicos e intuitivos. Minha
-                experiência abrange o desenvolvimento de aplicações web e
-                mobile, além de infraestrutura de TI e computação em nuvem.
+                {t.about.description1}
               </p>
               <p className="text-gray-200 text-lg leading-relaxed text-justify mb-2">
-                Estou sempre de olho nas novidades, buscando aprimorar minhas
-                habilidades, especialmente em computação em nuvem e
-                desenvolvimento front-end – áreas que realmente me fascinam!
+                {t.about.description2}
               </p>
               <p className="text-gray-200 text-lg leading-relaxed text-justify">
-                E quando não estou imerso em códigos ou explorando novas
-                tecnologias, meu passatempo favorito é jogar.🎮
+                {t.about.description3}
               </p>
             </div>
           </section>
           <section className="w-full max-w-6xl flex flex-col md:flex-row gap-8">
             <SkillCard
-              title="Soft Skills"
+              title={t.about.softSkills}
               skills={[
-                { name: "Comunicação", icon: <FaRegLightbulb className="text-yellow-400" /> },
-                { name: "Trabalho em equipe", icon: <FaPeopleCarry className="text-red-500" /> },
-                { name: "Adaptabilidade", icon: <FaUserCheck className="text-blue-500" /> },
-                { name: "Proatividade", icon: <FaUserFriends className="text-green-500" /> },
-                { name: "Empatia", icon: <FaRegSmile className="text-pink-400" /> },
-                { name: "Organização", icon: <FaRegListAlt className="text-orange-500" /> },
-                { name: "Aprendizado contínuo", icon: <FaBookOpen className="text-blue-500" /> },
+                { name: t.about.skills.communication, icon: <FaRegLightbulb className="text-yellow-400" /> },
+                { name: t.about.skills.teamwork, icon: <FaPeopleCarry className="text-red-500" /> },
+                { name: t.about.skills.adaptability, icon: <FaUserCheck className="text-blue-500" /> },
+                { name: t.about.skills.proactivity, icon: <FaUserFriends className="text-green-500" /> },
+                { name: t.about.skills.empathy, icon: <FaRegSmile className="text-pink-400" /> },
+                { name: t.about.skills.organization, icon: <FaRegListAlt className="text-orange-500" /> },
+                { name: t.about.skills.continuousLearning, icon: <FaBookOpen className="text-blue-500" /> },
               ]}
             />
             <SkillCard
-              title="Hard Skills"
+              title={t.about.hardSkills}
               skills={[
                 { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
                 { name: "React", icon: <FaReact className="text-cyan-400" /> },
@@ -86,12 +83,12 @@ export default function About() {
             />
           </section>
           <a
-            href="/Portfolio/curriculo.pdf"
+            href={language === 'pt' ? "/Portfolio/CV_PT.pdf" : "/Portfolio/CV_EN.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-6 px-6 py-2 rounded-lg border-2 border-green-400 text-green-400 font-semibold hover:bg-green-400 hover:text-black shadow-[0_0_8px_#01AD5D] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_16px_#01AD5D]"
           >
-            Baixar Currículo
+            {t.about.downloadCV}
           </a>
         </div>
       </div>

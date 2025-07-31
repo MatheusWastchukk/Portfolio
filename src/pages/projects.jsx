@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import AnimatedBackground from "../components/AnimatedBackground";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
 import { FaReact, FaNodeJs, FaGithub, FaJava, FaBootstrap, FaHtml5, FaCss3, FaSass, FaAngular } from "react-icons/fa";
 import {
   SiJavascript,
@@ -23,11 +25,13 @@ import { IoMail } from "react-icons/io5";
 export default function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const projectsData = [
     {
-      title: "Galeriloop",
-      description: "Aplicação web para gerenciar fotos.",
+      title: t.projects.galeriloop.title,
+      description: t.projects.galeriloop.description,
       cover: "/Portfolio/assets/Galeriloop/Cover_Galeriloop.png",
       techs: [
         { name: "NodeJs", icon: <FaNodeJs className="text-green-500" /> },
@@ -42,42 +46,13 @@ export default function Projects() {
           icon: <SiJavascript className="text-yellow-400" />,
         },
       ],
-      gallery: ["/Portfolio/assets/Galeriloop/Cover_Galeriloop.png", "/Portfolio/assets/Galeriloop/Home_Galeriloop.png", "/Portfolio/assets/Galeriloop/Album_Vazio_Galeriloop.png", "/Portfolio/assets/Galeriloop/Album_Fotos_Galeriloop.png", "/Portfolio/assets/Galeriloop/Links_Galeriloop.png", "/Portfolio/assets/Galeriloop/Cart_Galeriloop.png"],
-      detalhes:
-        "O sistema Galeriloop é uma plataforma de gerenciamento de fotos projetada para otimizar o fluxo de trabalho de instituições e empresas. Suas principais funcionalidades incluem um módulo de upload de fotos que aplica automaticamente marcas d'água e reduz a qualidade das imagens para pré-visualização. Além disso, possui um sistema de gerenciamento de grupos e links que permite a criação de links seguros para grupos de usuários e a organização em subgrupos. Por fim, o Galeriloop conta com um módulo de e-commerce com carrinho de compras, onde os usuários podem selecionar fotos, calcular o valor total do pedido e receber uma cotação por e-mail através do Nodemailer. Todo o projeto é executado em ambiente Docker, garantindo portabilidade e escalabilidade.",
-      link: "#",
+      gallery: ["/Portfolio/assets/Galeriloop/Cover_Galeriloop.png", "/Portfolio/assets/Galeriloop/Login_Galeriloop.png", "/Portfolio/assets/Galeriloop/Home_Galeriloop.png", "/Portfolio/assets/Galeriloop/Album_Vazio_Galeriloop.png", "/Portfolio/assets/Galeriloop/Album_Fotos_Galeriloop.png", "/Portfolio/assets/Galeriloop/Links_Galeriloop.png", "/Portfolio/assets/Galeriloop/Cart_Galeriloop.png"],
+      detalhes: t.projects.galeriloop.details,
+      link: "https://github.com/MatheusWastchukk/Galeriloop",
     },
-    /*{
-      title: "Portfólio Pessoal",
-      description:
-        "Site pessoal para apresentar minhas experiências, projetos e habilidades.",
-      cover: "/assets/portfolio/Home_Portfolio.png",
-      techs: [
-        { name: "React", icon: <FaReact className="text-cyan-400" /> },
-        {
-          name: "TailwindCSS",
-          icon: <SiTailwindcss className="text-cyan-300" />,
-        },
-        {
-          name: "JavaScript",
-          icon: <SiJavascript className="text-yellow-400" />,
-        },
-        { name: "GitHub", icon: <FaGithub className="text-white" /> },
-        { name: "Vite", icon: <SiVite className="text-white" /> },
-      ],
-      gallery: [
-        "/assets/portfolio/Home_Portfolio.png",
-        "/assets/portfolio/Experiencia_Portfolio.png",
-        "/assets/portfolio/Formacao_Portfolio.png",
-        "/assets/portfolio/SobreMim_Portfolio.png",
-      ],
-      detalhes:
-        "Este é o meu portfólio pessoal, desenvolvido para apresentar minhas habilidades e projetos de forma interativa e visualmente atraente. Utilizei React com Javascript para a estrutura da aplicação e animações/funcionalidades, Tailwind CSS para a estilização rápida e responsiva, e um fundo animado com partículas para adicionar um toque dinâmico.",
-      link: "https://github.com/MatheusWastchukk/portfolio_web",
-    }, */
     {
-      title: "Chronnos",
-      description: "Aplicação web da Carteira Acadêmica Digital.",
+      title: t.projects.chronnos.title,
+      description: t.projects.chronnos.description,
       cover: "/Portfolio/assets/chronnos/cover-chronnos.png",
       techs: [
         { name: "NodeJs", icon: <FaNodeJs className="text-green-500" /> },
@@ -94,13 +69,12 @@ export default function Projects() {
         "/Portfolio/assets/chronnos/mobile3_chronnos.png",
         "/Portfolio/assets/chronnos/mobile4_chronnos.png",
       ],
-      detalhes:
-        "Um sistema completo para gerenciar certificados e cursos. O Chronnos é um software web, desenvolvido em um projeto acadêmico, que funciona como uma carteira de cursos digital completa, projetada para centralizar e organizar todo o histórico acadêmico de um usuário, permitindo o registro detalhado de cursos com certificados, custos, tempo de estudo, datas e notas, visando facilitar o acesso e compartilhamento seguro dessas informações. Seu principal recurso é uma TimeLine gráfica que exibe visualmente a trajetória de estudos, útil tanto para acompanhamento pessoal quanto para enriquecer perfis profissionais. Para sua construção, o Node.js foi empregado no backend, permitindo que a lógica do servidor fosse escrita em JavaScript para processar requisições e interagir com o banco de dados. Este, por sua vez, foi implementado com MySQL, responsável por armazenar de forma estruturada e persistente todos os dados da plataforma. A interface do usuário (frontend) foi desenvolvida com React e JavaScript, proporcionando uma experiência intuitiva e dinâmica, enquanto o Vite otimizou o processo de desenvolvimento do frontend, acelerando o build e as atualizações durante a codificação. Concebido para o usuário moderno, o Chronnos oferece uma solução prática para gerenciar e exibir conquistas acadêmicas de forma integrada e acessível.",
+      detalhes: t.projects.chronnos.details,
       link: "https://github.com/KleidsonRocha/Chronnos",
     },
     {
-      title: "SCE - Sistema de Controle de Estoque",
-      description: "Sistema Web para controle de estoque da Sementes Estrela.",
+      title: t.projects.sce.title,
+      description: t.projects.sce.description,
       cover: "/Portfolio/assets/SCE/Cover_SCE.png",
       techs: [
         { name: "Java", icon: <FaJava className="text-orange-600" />},
@@ -114,13 +88,12 @@ export default function Projects() {
         
       ],
       gallery: ["/Portfolio/assets/SCE/Cover_SCE.png", "/Portfolio/assets/SCE/Home_SCE.png"],
-      detalhes:
-        "O Sistema de Controle de Estoque (SCE) foi uma aplicação web desenvolvida para otimizar a gestão de estoque e compras da Sementes Estrela, visando reduzir custos operacionais e evitar aquisições desnecessárias ao integrar as filiais da empresa para um controle centralizado e compras mais inteligentes. Para sua construção, o frontend utilizou HTML, CSS e JavaScript, criando uma interface intuitiva e responsiva para a visualização de estoque e gestão de pedidos, enquanto o backend foi implementado com Java Spring Boot, garantindo segurança, escalabilidade e uma integração eficiente com o banco de dados PostgreSQL, que ficou responsável pelo armazenamento e gerenciamento dos dados de estoque, compras e filiais. Antes da implementação do SCE, a empresa enfrentava problemas como compras excessivas de itens já disponíveis em outras unidades; com o sistema, foi possível reduzir significativamente gastos com aquisições redundantes, centralizar o controle de estoque para decisões assertivas e aumentar a eficiência operacional ao automatizar a gestão de inventário. As funcionalidades principais do SCE incluem uma visão integrada de todos os itens nas filiais, alertas de reposição baseados em níveis mínimos, a integração entre filiais para permitir a transferência interna de itens antes de novas compras, e a geração de relatórios gerenciais para análise de custos e tomada de decisão estratégica, resultando em uma gestão de estoque mais eficiente e econômica para a Sementes Estrela.",
+      detalhes: t.projects.sce.details,
       link: "#",
     },
     {
-      title: "GSE - Gestão Sementes Estrela",
-      description: "Sistema Web ERP integrado com diversos setores da empresa.",
+      title: t.projects.gse.title,
+      description: t.projects.gse.description,
       cover: "/Portfolio/assets/GSE/Login_GSE.png",
       techs: [
         { name: "Angular", icon: <FaAngular className="text-red-500" /> },
@@ -134,8 +107,7 @@ export default function Projects() {
         
       ],
       gallery: ["/Portfolio/assets/GSE/Login_GSE.png", "/Portfolio/assets/GSE/Checklist_GSE.png"],
-      detalhes:
-        "O Gestão Sementes Estrela (GSE) é um sistema web de planejamento de recursos empresariais (ERP) desenvolvido para a Sementes Estrela, projetado para centralizar e otimizar as operações de diversos setores da empresa, como Qualidade, Estoque, Recursos Humanos e TI. Este sistema encontra-se em desenvolvimento contínuo, com a integração progressiva de novas funcionalidades e setores para abranger de forma cada vez mais completa as necessidades da organização. Para sua construção, o frontend é desenvolvido com Angular, utilizando TypeScript para uma codificação mais robusta e organizada, HTML5 para a estruturação das páginas e SCSS para a estilização avançada, resultando em uma interface de usuário moderna e interativa. A lógica de negócios e o backend do sistema são implementados em Java com o auxílio do framework Spring Boot, que oferece uma plataforma eficiente para criar serviços seguros e escaláveis. O armazenamento e gerenciamento de todos os dados da aplicação são confiados ao banco de dados PostgreSQL, enquanto o controle de versão do código e a colaboração entre a equipe de desenvolvimento são gerenciados através do GitHub, assegurando um processo de desenvolvimento ágil e organizado para este ERP em constante evolução.",
+      detalhes: t.projects.gse.details,
       link: "#",
     },
   ];
@@ -164,9 +136,9 @@ export default function Projects() {
         <Header activePage="projects" />
         <div className="pt-24 sm:pt-28 flex-1 flex flex-col items-center px-4 sm:px-6 md:px-32 py-8 sm:py-16">
           <h1 className="text-3xl font-bold text-white mb-8 border-b-2 border-green-400 pb-2 drop-shadow-[0_0_8px_#01AD5D] w-full max-w-4xl text-center">
-            Projetos
+            {t.projects.title}
           </h1>
-          <p className="text-lg text-gray-300 mb-8 text-center">Conheça meus principais projetos</p>
+          <p className="text-lg text-gray-300 mb-8 text-center">{t.projects.subtitle}</p>
 
           <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {projectsData.map((project, index) => (
@@ -181,8 +153,8 @@ export default function Projects() {
             ))}
           </div>
           <div className="w-full max-w-4xl text-center justify-items-center mt-8 text-gray-300">
-            <p className="mb-2">Se desejar ver mais projetos, visite meu GitHub:</p>
-            <a href="https://github.com/MatheusWastchukk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-5xl transition-colors" aria-label="Perfil do GitHub">
+            <p className="mb-2">{t.projects.moreProjects}</p>
+            <a href="https://github.com/MatheusWastchukk" target="_blank" rel="noopener noreferrer" className="inline-block text-gray-400 hover:text-white text-5xl transition-colors" aria-label="Perfil do GitHub">
               <FaGithub />
             </a>
           </div>

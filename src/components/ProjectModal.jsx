@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaTimes, FaGithub } from "react-icons/fa";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations";
 
 /**
  * Componente que exibe um modal com detalhes do projeto
@@ -10,8 +12,13 @@ import { FaTimes, FaGithub } from "react-icons/fa";
  */
 export default function ProjectModal({ project, onClose }) {
   const [fullScreenImage, setFullScreenImage] = useState(null);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   if (!project) return null;
+
+  // Verifica se o projeto tem link válido (não é "#" ou vazio)
+  const hasValidLink = project.link && project.link !== "#" && project.link !== "";
 
   /**
    * Abre uma imagem em tela cheia
@@ -60,21 +67,21 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           
-          {project.link && (
+          {hasValidLink && (
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-green-400 hover:underline mb-6"
             >
-              <FaGithub className="text-xl" /> Ver no GitHub
+              <FaGithub className="text-xl" /> {t.projects.viewGitHub}
             </a>
           )}
 
           
           {project.gallery && project.gallery.length > 0 && (
             <div className="mt-4">
-              <h3 className="text-xl font-semibold text-white mb-4">Galeria</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">{t.projects.gallery}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pr-2">
                 {project.gallery.map((image, idx) => (
                   <img
@@ -108,7 +115,7 @@ export default function ProjectModal({ project, onClose }) {
               className="mt-4 px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-200 block mx-auto"
               aria-label="Fechar Imagem"
             >
-              Fechar
+              {t.projects.close}
             </button>
           </div>
         </div>
