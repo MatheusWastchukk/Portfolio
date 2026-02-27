@@ -27,18 +27,45 @@ export default function Experience() {
               </h2>
               <div className="flex flex-col gap-6">
                 <ExperienceCard
+                  logo="/Portfolio/assets/logo_kisSolutions.jpg"
+                  cargo={t.experience.jobs.kisSolutions.title}
+                  empresa={t.experience.jobs.kisSolutions.company}
+                  periodo={t.experience.jobs.kisSolutions.period}
+                  tags={[
+                    t.experience.tags.webDevelopment,
+                    t.experience.tags.frontend,
+                    t.experience.tags.backend,
+                    t.experience.tags.database,
+                    t.experience.tags.angular,
+                    t.experience.tags.java,
+                    t.experience.tags.springBoot,
+                    t.experience.tags.javascript,
+                  ]}
+                  atividades={t.experience.jobs.kisSolutions.activities}
+                />
+                <ExperienceCard
                   logo="/Portfolio/assets/logo_sementesEstrela.jpg"
                   cargo={t.experience.jobs.auxiliarTI.title}
                   empresa="Sementes Estrela"
                   periodo={t.experience.jobs.auxiliarTI.period}
                   tags={[
                     t.experience.tags.technicalSupport,
-                    t.experience.tags.networksHardware,
+                    t.experience.tags.database,
+                    t.experience.tags.frontend,
+                    t.experience.tags.backend,
                     t.experience.tags.uxDesign,
                     t.experience.tags.webDevelopment,
                     t.experience.tags.mobileDevelopment,
-                    t.experience.tags.frontend,
-                    t.experience.tags.infrastructure
+                    t.experience.tags.angular,
+                    t.experience.tags.java,
+                    t.experience.tags.node,
+                    t.experience.tags.springBoot,
+                    t.experience.tags.javascript,
+                    t.experience.tags.typescript,
+                    t.experience.tags.html,
+                    t.experience.tags.css,
+                    t.experience.tags.git,
+                    t.experience.tags.github,
                   ]}
                   atividades={t.experience.jobs.auxiliarTI.activities}
                 />

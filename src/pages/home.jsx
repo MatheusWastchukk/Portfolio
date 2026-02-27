@@ -1,5 +1,5 @@
 import React from "react";
-import { FaAngular, FaReact, FaGithub, FaFigma, FaLinkedin } from "react-icons/fa";
+import { FaAngular, FaReact, FaGithub, FaFigma, FaLinkedin, FaJava } from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
@@ -7,6 +7,7 @@ import {
   SiCss3,
   SiTailwindcss,
   SiGit,
+  SiSpringboot,
 } from "react-icons/si";
 import Header from "../components/Header";
 import AnimatedBackground from "../components/AnimatedBackground";
@@ -83,6 +84,8 @@ export default function Home() {
           <SiCss3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white/80 hover:text-white transition-colors" aria-label="Css3" />
           <SiTailwindcss className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white/80 hover:text-white transition-colors" aria-label="Tailwindcss" />
           <SiGit className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white/80 hover:text-white transition-colors" aria-label="Git" />
+          <FaJava className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white/80 hover:text-white transition-colors" aria-label="Java" />
+          <SiSpringboot className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white/80 hover:text-white transition-colors" aria-label="Spring Boot" />
           <FaGithub className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white/80 hover:text-white transition-colors" aria-label="Github" />
           <FaFigma className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white/80 hover:text-white transition-colors" aria-label="Figma" />
         </footer>
